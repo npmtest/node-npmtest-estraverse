@@ -1,1 +1,40 @@
-{     "devDependencies": {         "estraverse": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-estraverse",     "homepage": "https://github.com/npmtest/node-npmtest-estraverse",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-estraverse.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [estraverse (v4.2.0)](https://github.com/estools/estraverse) [![npm package](https://img.shields.io/npm/v/npmtest-estraverse.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-estraverse) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-estraverse.svg)](https://travis-ci.org/npmtest/node-npmtest-estraverse)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "estraverse": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-estraverse",
+    "keywords": [
+        "coverage",
+        "test",
+        "estraverse"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_estraverse.js",
+    "name": "npmtest-estraverse",
+    "nameAlias": "npmtest_estraverse",
+    "nameOriginal": "npmtest-estraverse",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-estraverse.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}

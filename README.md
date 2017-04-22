@@ -1,4 +1,7 @@
-# test coverage for  [estraverse (v4.2.0)](https://github.com/estools/estraverse)  [![npm package](https://img.shields.io/npm/v/npmtest-estraverse.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-estraverse) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-estraverse.svg)](https://travis-ci.org/npmtest/node-npmtest-estraverse)
+# npmtest-estraverse
+
+#### basic test coverage for  [estraverse (v4.2.0)](https://github.com/estools/estraverse)  [![npm package](https://img.shields.io/npm/v/npmtest-estraverse.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-estraverse) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-estraverse.svg)](https://travis-ci.org/npmtest/node-npmtest-estraverse)
+
 #### ECMAScript JS AST traversal functions
 
 [![NPM](https://nodei.co/npm/estraverse.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/estraverse)
@@ -84,7 +87,8 @@
         "test": "npm run-script lint && npm run-script unit-test",
         "unit-test": "mocha --compilers js:babel-register"
     },
-    "version": "4.2.0"
+    "version": "4.2.0",
+    "bin": {}
 }
 ```
 
